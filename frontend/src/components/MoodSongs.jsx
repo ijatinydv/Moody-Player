@@ -1,15 +1,8 @@
-import React, { useState } from 'react'
 import './MoodSongs.css'
 
-const Moodsongs = ()=> {
+const Moodsongs = ({songs})=> {
 
-    const [songs, setSongs] = useState([
-        {
-            title:"test song",
-            artist:"test artist",
-            url:"test-url",
-        }
-    ])
+    
 
   return (
     <div className="mood-songs">
