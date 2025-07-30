@@ -7,15 +7,13 @@ function App() {
 
   const [songs, setSongs] = useState([
           {
-              title:"test song",
-              artist:"test artist",
-              url:"test-url",
+             
           }
       ])
   return (
     <>
       <FacialExpression setSongs={setSongs}/>
-      <Moodsongs Songs= {songs} />
+      <Moodsongs songs= {songs} />
     </>
   )
 }
