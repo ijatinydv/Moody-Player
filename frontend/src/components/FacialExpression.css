@@ -1,26 +1,137 @@
-.user-video-feed {
-  width: 20rem;
-  aspect-ratio: 16/9;
-  border-radius: 1rem;
-  object-fit: cover;
+.mood-detector-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.mood-element {
+@media (min-width: 768px) {
+  .mood-detector-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.video-container {
   position: relative;
   width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 4rem;
-  justify-content: flex-start;
-  margin-top: 2rem;
+  max-width: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background-color: var(--background-light);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.mood-element button {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  background-color: #007bff;
+.user-video-feed {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 10;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.controls {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.detect-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
   border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+}
+
+.detect-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(108, 99, 255, 0.4);
+}
+
+.detect-button:disabled {
+  background: #666;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.detect-button i {
+  font-size: 1.3rem;
+}
+
+.error-message {
+  padding: 0.75rem 1rem;
+  background-color: rgba(255, 87, 87, 0.2);
+  border-left: 4px solid #ff5757;
+  border-radius: 4px;
+  color: #ff9999;
+}
+
+.instructions {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.instructions h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+}
+
+.instructions ol {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.instructions li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
 }

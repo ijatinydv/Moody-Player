@@ -1,19 +1,177 @@
-.mood-songs{
+.mood-songs-container {
     width: 100%;
-    padding: 4rem;
-    padding-top: 0;
-    color: white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 2rem 1rem;
+    color: var(--text-color);
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.mood-songs h2{
-    margin-bottom: 1rem;
-}
-
-.mood-songs .song{
+.mood-header {
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .mood-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.mood-header h2 {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: 700;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.current-mood {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .current-mood {
+        margin-top: 0;
+    }
+}
+
+.mood-badge {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.no-songs-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.no-songs-message i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.no-songs-message p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+.songs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.song-card {
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0.5rem;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.song-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow);
+}
+
+.song-card.playing {
+    background: linear-gradient(to right, rgba(108, 99, 255, 0.2), rgba(255, 117, 151, 0.2));
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.song-info {
+    flex: 1;
+}
+
+.song-title {
+    margin: 0 0 0.3rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.song-artist {
+    margin: 0;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+.song-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.progress-container {
+    width: 100%;
+    max-width: 200px;
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 4px;
+    border-radius: 2px;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    transition: width 0.1s linear;
+}
+
+.time-display {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.7rem;
+    opacity: 0.7;
+}
+
+.play-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 10px rgba(108, 99, 255, 0.3);
+}
+
+.play-button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.play-button i {
+    font-size: 1.2rem;
 }
