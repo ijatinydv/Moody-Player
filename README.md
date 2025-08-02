@@ -113,18 +113,6 @@ Moody Player is an innovative web application that uses facial expression recogn
 
 Moody Player processes facial expressions locally in your browser. No video data is sent to our servers - only the detected mood is transmitted to fetch song recommendations.
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines on how to contribute to this project.
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -137,4 +125,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Developed with ❤️ by the Moody Player Team
+Developed with ❤️ by Me
