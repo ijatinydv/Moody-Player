@@ -1,14 +1,16 @@
 {
-  "name": "backend",
+  "name": "moody-player-backend",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["mood", "music", "api", "express", "backend"],
   "author": "",
-  "license": "ISC",
-  "description": "",
+  "license": "MIT",
+  "description": "Backend server for the Moody Player application that provides mood-based song recommendations",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
@@ -16,5 +18,8 @@
     "imagekit": "^6.0.0",
     "mongoose": "^8.16.5",
     "multer": "^2.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
