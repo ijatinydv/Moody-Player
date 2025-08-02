@@ -37,7 +37,7 @@ Moody Player is an innovative web application that uses facial expression recogn
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/username/moody-player.git
+   git clone https://github.com/ijatinydv/Moody-Player.git
    cd moody-player
    ```
 
