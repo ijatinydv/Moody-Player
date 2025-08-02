@@ -9,7 +9,6 @@
   },
   "keywords": ["mood", "music", "api", "express", "backend"],
   "author": "",
-  "license": "MIT",
   "description": "Backend server for the Moody Player application that provides mood-based song recommendations",
   "dependencies": {
     "cors": "^2.8.5",

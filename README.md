@@ -113,9 +113,7 @@ Moody Player is an innovative web application that uses facial expression recogn
 
 Moody Player processes facial expressions locally in your browser. No video data is sent to our servers - only the detected mood is transmitted to fetch song recommendations.
 
-## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgements
 
